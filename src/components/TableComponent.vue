@@ -218,6 +218,10 @@
                     return this.rows;
                 }
 
+                if (typeof settings.sortHandler === "function") {
+                    return settings.sortHandler(this.rows, sortColumn.sortBy || sortColumn.show, this.sort.order);
+                }
+
                 return this.rows.sort(sortColumn.getSortPredicate(this.sort.order, this.columns));
             },
 

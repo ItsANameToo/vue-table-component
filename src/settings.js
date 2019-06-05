@@ -7,6 +7,7 @@ const settings = {
     filterInputClass: '',
     filterPlaceholder: 'Filter table…',
     filterNoResults: 'There are no matching rows',
+    sortHandler: null
 };
 
 export function mergeSettings(newSettings) {
